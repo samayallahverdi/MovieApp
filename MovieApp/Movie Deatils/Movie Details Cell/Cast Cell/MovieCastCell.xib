@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieCastCell" customModule="MovieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="204"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="204"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-EL-YHU">
+                        <rect key="frame" x="5" y="9.9999999999999982" width="232" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EiK-zp-avS">
+                        <rect key="frame" x="0.0" y="43.333333333333329" width="340" height="160.66666666666669"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Saj-SH-xbd">
+                            <size key="itemSize" width="128" height="150"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="gTV-IL-0wX" id="l2M-zS-QT8"/>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="Zm7-Ac-E3m"/>
+                        </connections>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="EiK-zp-avS" firstAttribute="top" secondItem="BFA-EL-YHU" secondAttribute="bottom" constant="13" id="1dl-Lc-Rxv"/>
+                <constraint firstItem="BFA-EL-YHU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="4df-Ar-oEe"/>
+                <constraint firstItem="BFA-EL-YHU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="7KX-a3-PdH"/>
+                <constraint firstAttribute="trailing" secondItem="EiK-zp-avS" secondAttribute="trailing" id="Lmd-Jf-mbm"/>
+                <constraint firstAttribute="trailing" secondItem="BFA-EL-YHU" secondAttribute="trailing" constant="103" id="Q61-H4-LRQ"/>
+                <constraint firstItem="EiK-zp-avS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cwR-q3-psj"/>
+                <constraint firstAttribute="bottom" secondItem="EiK-zp-avS" secondAttribute="bottom" id="mFN-DX-Vt9"/>
+            </constraints>
+            <size key="customSize" width="340" height="204"/>
+            <connections>
+                <outlet property="castCollection" destination="EiK-zp-avS" id="gLa-LK-0pX"/>
+            </connections>
+            <point key="canvasLocation" x="232.06106870229007" y="-4.2253521126760569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
